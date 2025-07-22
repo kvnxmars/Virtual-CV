@@ -177,3 +177,47 @@ footer {
 .experience-item ul li, .education-item ul li {
     margin-bottom: 8px;
 }
+
+.skills.category {
+    background-color: #fff;
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.skills-category h3 {
+    color: #222;
+    margin-bottom:15px;
+    font-size: 1.4em;
+}
+
+.skills-category ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.skills-category ul li {
+    background-color: #e0f7fa;
+    color: #00796b;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.skills-category ul li:hover {
+    background-color: #b2ebf2;
+    transform: translateY(-2px);
+}
+
+.project-item {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
