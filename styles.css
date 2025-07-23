@@ -1,34 +1,38 @@
+/* Basic Reset & Box-Sizing */
 *, *::before, *::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
+/* Base Body Styles */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Arial', sans-serif; /* Or choose a Google Font for flair later */
     line-height: 1.6;
-    color: #333; 
-    background-color:#f4f4f4;
-    scroll-behavior: smooth;
-
+    color: #333; /* Dark grey text */
+    background-color: #f4f4f4; /* Light grey background */
+    scroll-behavior: smooth; /* Smooth scrolling for nav links */
 }
 
+/* Section Padding */
 .section-padding {
-    padding: 60px 20px;
-    max-width: 1200px;
-    margin: 0 auto;
+    padding: 60px 20px; /* Top/bottom padding, left/right padding */
+    max-width: 1200px; /* Max width for content */
+    margin: 0 auto; /* Center the content */
 }
 
-.header {
-    background: #222;
-    color: #fff;
+/* --- HEADER & NAVIGATION --- */
+/* Corrected from .header to header to match HTML <header id="home"> */
+header {
+    background: #99bcee; /* Light background for header */
+    color: #0a0101;
     padding: 20px 0;
     text-align: center;
-    position: relative;
-    min-height: 100vh;
+    position: relative; /* For positioning hero content */
+    min-height: 100vh; /* Make header take full viewport height */
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-between; /* Pushes nav to top, hero to middle/bottom */
 }
 
 nav ul {
@@ -43,55 +47,71 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #aaccff;
+    color: #08224a; /* Your chosen navigation link color */
     text-decoration: none;
     font-weight: bold;
     padding: 5px 0;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease; /* Smooth transition for hover */
 }
 
 nav ul li a:hover {
-    color: #13292c;
+    color: #1c0360; /* Your chosen navigation link hover color */
 }
 
+/* Hero Content (adjust positioning and text size) */
 .hero-content {
-    flex-grow: 1;
+    flex-grow: 1; /* Allows it to take available space */
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: center; /* Vertically center content */
+    align-items: center; /* Horizontally center content */
     text-align: center;
     padding: 20px;
-    position: relative;
+    position: relative; /* For absolute positioning of elements later if needed */
 }
 
 .hero-content h1 {
-    font-size:3.5em;
+    font-size: 3.5em; /* Larger heading */
     margin-bottom: 10px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Subtle text shadow */
 }
 
 .hero-content p {
     font-size: 1.5em;
     margin-bottom: 20px;
-    color: #5b6065;
+    color: #5b6065; /* Your chosen hero paragraph color */
+}
+.hero-content a {
+    display: inline-block; /* Already inline-block, good for buttons */
+    background-color: #00bcd4;
+    color: #fff;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    /* --- CHANGE START --- */
+    margin: 0; /* Remove previous margin-top, let gap handle spacing */
+    /* --- CHANGE END --- */
 }
 
+/* Profile Picture Styling */
 .profile-pic {
-    width: 200px;
+    width: 200px; /* Size of the image */
     height: 200px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 5px solid #00bcd4;
-    margin-bottom: 30px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease-in-out;
+    border-radius: 50%; /* Makes it a circle */
+    object-fit: cover; /* Ensures image covers the area without distortion */
+    border: 5px solid #00bcd4; /* Border color for flair */
+    margin-bottom: 30px; /* Space below the image */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3); /* Subtle shadow */
+    transition: transform 0.3s ease-in-out; /* For hover animation */
 }
 
 .profile-pic:hover {
-    transform: scale(1.05) rotate(3deg);
+    transform: scale(1.05) rotate(3deg); /* A subtle zoom and rotate on hover */
 }
 
+/* Button Styling (for "View My Projects" button) */
 .button {
     display: inline-block;
     background-color: #00bcd4;
@@ -101,7 +121,7 @@ nav ul li a:hover {
     border-radius: 5px;
     font-weight: bold;
     transition: background-color 0.3s ease, transform 0.2s ease;
-    margin-top: 20px;
+    margin: 10px; /* Added margin to separate buttons */
 }
 
 .button:hover {
@@ -109,39 +129,42 @@ nav ul li a:hover {
     transform: translateY(-3px); /* Lift effect on hover */
 }
 
+/* General Heading Styles */
 h2 {
     font-size: 2.5em;
     color: #00bcd4;
     text-align: center;
     margin-bottom: 40px;
     position: relative;
-    padding-bottom:10px;
+    padding-bottom: 10px;
 }
 
-h2::after {
+h2::after { /* Underline effect for H2 */
     content: '';
     position: absolute;
-    left:50px;
+    left: 50%; /* Corrected from 50px to 50% */
     bottom: 0;
-    transform: translateX(-50%);
+    transform: translateX(-50%); /* Ensures perfect centering */
     width: 80px;
     height: 4px;
     background-color: #00bcd4;
     border-radius: 2px;
 }
 
+/* Footer */
 footer {
-    background:#333;
+    background: #333;
     color: #fff;
     text-align: center;
     padding: 20px 0;
     font-size: 0.9em;
-    position: relative;
+    position: relative; /* Kept your position:relative */
 }
 
+/* Experience and Education Items */
 .experience-item, .education-item {
     background-color: #fff;
-    border-left: 5px solid #00bcd4;
+    border-left: 5px solid #00bcd4; /* Accent border */
     padding: 25px;
     margin-bottom: 30px;
     border-radius: 8px;
@@ -149,12 +172,12 @@ footer {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .experience-item:hover, .education-item:hover {
-    transform: translateY(-5px);
+    transform: translateY(-5px); /* Lift effect on hover */
     box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
 .experience-item h3, .education-item h3 {
-    color:#222;
+    color: #222;
     margin-bottom: 5px;
 }
 
@@ -163,7 +186,7 @@ footer {
 .education-item .institution,
 .education-item .dates {
     font-style: italic;
-    font-size: 0.9em;
+    font-size: 0.9em; /* Your added font-size */
     color: #666;
     margin-bottom: 10px;
 }
@@ -178,6 +201,7 @@ footer {
     margin-bottom: 8px;
 }
 
+/* Skills Section */
 .skills-category {
     background-color: #fff;
     padding: 25px;
@@ -189,7 +213,7 @@ footer {
 
 .skills-category h3 {
     color: #222;
-    margin-bottom:15px;
+    margin-bottom: 15px;
     font-size: 1.4em;
 }
 
@@ -212,39 +236,53 @@ footer {
 }
 
 .skills-category ul li:hover {
-    background-color: #f2d8b2;
+    background-color: #f2d8b2; /* Your chosen hover color */
     transform: translateY(-2px);
 }
 
+/* Projects Section (Grid Layout) */
 .project-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
 }
 
-
-.project-item {
+/* --- Project Item as a Clickable Card --- */
+/* The <a> tag now has both project-item and project-link-wrapper classes */
+.project-item { /* Styles common to all project cards */
     background-color: #fff;
     border-radius: 8px;
-    box-shadow: 0m 4px 15px rgba(0,0 0, 0.1);
+    /* Corrected box-shadow syntax */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     padding: 25px;
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    /* Styles specifically for the <a> tag wrapping the whole card */
+    text-decoration: none; /* Remove underline from the link */
+    color: inherit; /* Inherit text color from parent */
+    height: 100%; /* Ensure all cards in the grid have equal height if possible */
 }
 
+/* Apply hover effects to the whole project-item (which is now the <a> tag) */
 .project-item:hover {
     transform: translateY(-8px);
-    box-shadow: 0 10px 25px rgba(0,0 0, 0.2);
+    /* Corrected box-shadow syntax */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 }
 
+/* No need for .project-link-wrapper if .project-item is already on the <a> tag and has display:block */
+/* If you want to keep project-link-wrapper for clarity, ensure it has display: block */
 .project-link-wrapper {
-    display: block;
-    text-decoration: none;
-    color:inherit;;
+    display: block; /* Ensure the anchor tag takes up the full card space */
+    text-decoration: none; /* Ensure no underline on the whole card */
+    color: inherit; /* Inherit text color */
+    height: 100%; /* Important for proper flex/grid layout in project-grid */
 }
+
 
 .project-item h3 {
     color: #00bcd4;
@@ -262,6 +300,7 @@ footer {
     color: #333;
 }
 
+/* Project Image Container */
 .project-pic {
     background-color: #e0e0e0;
     height: 200px;
@@ -280,37 +319,23 @@ footer {
     display: block;
 }
 
-.project-item .project-link  {
-    display: inline-block;
-    background-color: #00bcd4;
-    color: #fff;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    margin-top: 15px;
-    transition: background-color 0.3s ease, transform 0.2s ease
-}
-.project-item:hover .project-link {
-    background-color: #008da0;
-    transform: translateY(-2px);
-}
-
+/* These rules seem to be duplicates of .project-pic and its img rule above, or were from an old structure. */
+/* Keeping for now, but often indicate redundancy. */
 .project-item .project-media-placeholder {
-    background-color: #e0e0e0; /* Light grey background for placeholder */
-    height: 200px; /* Fixed height for image area */
+    background-color: #e0e0e0;
+    height: 200px;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 15px;
     border-radius: 5px;
-    overflow: hidden; /* Ensure image fits */
+    overflow: hidden;
 }
 
 .project-item .project-media-placeholder img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Cover the area, cropping if necessary */
+    object-fit: cover;
 }
 
 .project-item .project-media-caption {
@@ -319,6 +344,8 @@ footer {
     margin-top: 5px;
 }
 
+/* This is for any *internal* link within the project item if you had one, not the main card link. */
+/* It's good to keep this separate from the overall card clickability. */
 .project-item .project-link {
     display: inline-block;
     background-color: #00bcd4;
@@ -336,13 +363,15 @@ footer {
     transform: translateY(-2px);
 }
 
+
 /* Contact Section */
-.contact-list {
+/* Corrected from .contact-list to .contact-links to match HTML */
+.contact-links {
     text-align: center;
     margin-top: 30px;
 }
 
-.contact-list a {
+.contact-links a {
     display: inline-block;
     background-color: #333;
     color: #fff;
@@ -354,18 +383,24 @@ footer {
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.contact-list a:hover {
+contact p {
+    /*paragraph must be in the middle of the footer*/
+    text-align: center;
+}
+
+.contact-links a:hover {
     background-color: #00bcd4; /* Highlight on hover */
     transform: translateY(-3px);
 }
 
+/* --- SCROLL-REVEAL ANIMATION CSS (for JavaScript) --- */
 section {
     opacity: 0;
     transform: translateY(30px);
     transition: all 0.6s ease;
 }
 
-section.visible {
+section.visible { /* This class will be added by JavaScript */
     opacity: 1;
     transform: translateY(0);
 }
@@ -385,7 +420,7 @@ section.visible {
     }
     nav ul li {
         margin: 10px;
-        display: block;
+        display: block; /* Make list items stack vertically on mobile */
     }
     .section-padding {
         padding: 40px 15px;
