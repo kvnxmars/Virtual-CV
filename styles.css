@@ -51,7 +51,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #00bcd4;
+    color: #13292c;
 }
 
 .hero-content {
@@ -222,6 +222,7 @@ footer {
     gap: 30px;
 }
 
+
 .project-item {
     background-color: #fff;
     border-radius: 8px;
@@ -239,6 +240,12 @@ footer {
     box-shadow: 0 10px 25px rgba(0,0 0, 0.2);
 }
 
+.project-link-wrapper {
+    display: block;
+    text-decoration: none;
+    color:inherit;;
+}
+
 .project-item h3 {
     color: #00bcd4;
     margin-bottom: 10px;
@@ -253,6 +260,40 @@ footer {
 
 .project-item strong {
     color: #333;
+}
+
+.project-pic {
+    background-color: #e0e0e0;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    overflow: hidden; /* Ensure image fits */
+}
+
+.project-pic img { /* Ensure image fits within the container */
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cover the area, cropping if necessary */
+    display: block;
+}
+
+.project-item .project-link  {
+    display: inline-block;
+    background-color: #00bcd4;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 15px;
+    transition: background-color 0.3s ease, transform 0.2s ease
+}
+.project-item:hover .project-link {
+    background-color: #008da0;
+    transform: translateY(-2px);
 }
 
 .project-item .project-media-placeholder {
