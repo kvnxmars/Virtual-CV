@@ -111,6 +111,15 @@ nav ul li a:hover {
     transform: scale(1.05) rotate(3deg); /* A subtle zoom and rotate on hover */
 }
 
+.hero-buttons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
 /* Button Styling (for "View My Projects" button) */
 .button {
     display: inline-block;
@@ -121,7 +130,7 @@ nav ul li a:hover {
     border-radius: 5px;
     font-weight: bold;
     transition: background-color 0.3s ease, transform 0.2s ease;
-    margin: 10px; /* Added margin to separate buttons */
+    margin: 0; /* Added margin to separate buttons */
 }
 
 .button:hover {
@@ -405,8 +414,49 @@ section.visible { /* This class will be added by JavaScript */
     transform: translateY(0);
 }
 
+/* Back to Top Button */
+.back-to-top-btn {
+    display: none;
+    position: fixed; /* Fixed position for the button */
+    bottom: 30px; /* Distance from the bottom */
+    right: 30px; /* Distance from the right */
+    background-color: #00bcd4; /* Button color */
+    color: #fff; /* Text color */
+    padding: 15px 20px; /* Padding for the button */
+    border-radius: 50%; /* Circular button */
+    text-align: center; /* Center the text */
+    text-decoration: none; /* No underline */
+    font-size: 1.5em; /* Font size */
+    line-height: 1; /* Center the icon vertically */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* Subtle shadow */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition */
+    z-index: 1000; /* Ensure it appears above other content */
+    opacity: 0; /*start hidden*/
+    pointer-events: none; /* Prevent interaction when hidden */
+}
+
+.back-to-top-btn:hover {
+    background-color: #008da0; /* Darker shade on hover */
+    transform: translateY(-3px); /* Lift effect on hover */
+}
+
+.back-to-top-btn.show {
+    opacity: 1;/*Show button*/
+    pointer-events: auto; /*allows clicks*/
+    transform: translateY(3px); /* Slightly lower position when shown */
+}
 /* Responsive Design */
 @media (max-width: 768px) {
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        gap: 10px; /* Adjust gap for vertical buttons */
+    }
     .hero-content h1 {
         font-size: 2.8em;
     }
