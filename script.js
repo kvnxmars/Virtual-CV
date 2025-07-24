@@ -1,18 +1,18 @@
-// --- SCROLL-REVEAL ANIMATION ---
 document.addEventListener('DOMContentLoaded', () => {
+    // --- SCROLL-REVEAL ANIMATION ---
     const sections = document.querySelectorAll('section');
 
     const observerOptions = {
-        root: null, // viewport
+        root: null,
         rootMargin: '0px',
-        threshold: 0.1 // When 10% of the section is visible
+        threshold: 0.1
     };
 
     const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
-                observer.unobserve(entry.target); // Stop observing once visible
+                observer.unobserve(entry.target);
             }
         });
     }, observerOptions);
@@ -23,23 +23,86 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- BACK TO TOP BUTTON FUNCTIONALITY ---
     const backToTopBtn = document.getElementById('backToTopBtn');
+    const nav = document.querySelector('nav');
 
-    // Show/hide button on scroll
     window.addEventListener('scroll', () => {
-        // If user has scrolled down more than 300px, show the button
+        // Show or hide back-to-top button
         if (window.scrollY > 300) {
             backToTopBtn.classList.add('show');
         } else {
             backToTopBtn.classList.remove('show');
         }
+
+        // Toggle shadow on nav
+        nav.classList.toggle('scrolled', window.scrollY > 50);
     });
 
-    // Smooth scroll to top when button is clicked
     backToTopBtn.addEventListener('click', (e) => {
-        e.preventDefault(); // Prevent default anchor link behavior
+        e.preventDefault();
         window.scrollTo({
             top: 0,
-            behavior: 'smooth' // Smooth scrolling animation
+            behavior: 'smooth'
         });
     });
+
+    // --- HERO TYPING ANIMATION ---
+    function typeEffect(element, text, speed = 100) {
+        let i = 0;
+        function type() {
+            if (i < text.length) {
+                element.innerHTML += text.charAt(i);
+                i++;
+                setTimeout(type, speed);
+            }
+        }
+        element.innerHTML = "";
+        type();
+    }
+
+    const heroTitle = document.querySelector('.type-target');
+    if (heroTitle) {
+        typeEffect(heroTitle, "Hi! I'm Unathi Kevin Mbolongwe", 75);
+    }
 });
+
+function typeLoop(element, messages, speed = 80, pause = 2000) {
+    let msgIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+
+    function type() {
+        const current = messages[msgIndex];
+        element.innerHTML = current.substring(0, charIndex);
+
+        if (!isDeleting && charIndex === current.length) {
+            setTimeout(() => {
+                isDeleting = true;
+                type();
+            }, pause);
+        } else if (isDeleting && charIndex === 0) {
+            isDeleting = false;
+            msgIndex = (msgIndex + 1) % messages.length;
+            setTimeout(type, speed);
+        } else {
+            charIndex += isDeleting ? -1 : 1;
+            setTimeout(type, isDeleting ? speed / 2 : speed);
+        }
+    }
+
+    type();
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    const heroTitle = document.querySelector('.type-target');
+    if (heroTitle) {
+        typeLoop(heroTitle, [
+            "Hi! I'm Unathi Kevin Mbolongwe",
+            "Final Year BSc IT Student",
+            "Full-Stack Dev in Training 🚀",
+            "Scroll down to see my work 👇"
+        ]);
+    }
+
+    
+});
+
