@@ -93,16 +93,37 @@ function typeLoop(element, messages, speed = 80, pause = 2000) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    const heroTitle = document.querySelector('.type-target');
-    if (heroTitle) {
-        typeLoop(heroTitle, [
+    //const heroTitle = document.querySelector('.type-target');
+    //if (heroTitle) {
+        /*typeLoop(heroTitle, [
             "Hi! I'm Unathi Kevin Mbolongwe",
             "Final Year BSc IT Student",
             "Full-Stack Dev in Training 🚀",
             "Scroll down to see my work 👇"
-        ]);
+        ]);*/
+        
+
+        // -- scroll reveal animation--//
+        const sections = document.querySelectorAll('section');
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+        sections.forEach(section => {
+            observer.observe(section);
+        });
     }
 
     
-});
+);
 
