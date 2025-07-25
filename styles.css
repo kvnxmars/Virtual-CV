@@ -269,7 +269,7 @@ footer {
 }
 
 .skills-category ul li:hover {
-    background-color: #f2d8b2; /* Your chosen hover color */
+    background-color: #3ea1e2; 
     transform: translateY(-2px);
 }
 
