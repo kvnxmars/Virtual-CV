@@ -93,16 +93,7 @@ function typeLoop(element, messages, speed = 80, pause = 2000) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    //const heroTitle = document.querySelector('.type-target');
-    //if (heroTitle) {
-        /*typeLoop(heroTitle, [
-            "Hi! I'm Unathi Kevin Mbolongwe",
-            "Final Year BSc IT Student",
-            "Full-Stack Dev in Training 🚀",
-            "Scroll down to see my work 👇"
-        ]);*/
-        
-
+    
         // -- scroll reveal animation--//
         const sections = document.querySelectorAll('section');
         const observerOptions = {
