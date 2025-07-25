@@ -73,11 +73,6 @@ Check the footer for my live GitHub activity status.
 
 Click on project cards to visit their respective GitHub repositories or live demos.
 
-📸 Screenshots
-(You'll want to add actual screenshots here. For now, a placeholder description)
-
-A snapshot of the portfolio's clean and engaging homepage, showcasing the hero section and navigation.
-
 🤝 Contributing
 While this is a personal portfolio, I'm always open to feedback and suggestions! If you have any ideas for improvements or find any issues, feel free to:
 
