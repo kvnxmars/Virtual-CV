@@ -1,16 +1,42 @@
 // --- components/Navbar.jsx ---
-import React from "react";
-
+import React, { useState } from "react";
 
 export default function Navbar() {
-return (
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
+  const closeMenu = () => {
+    setIsOpen(false);
+  };
+
+  const scrollToSection = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+      closeMenu();
+    }
+  };
+
+  return (
     <nav className="navbar">
-        <div className="nav-logo">KEVIN</div>
-        <ul className="nav-links">
-            <li><a href="#hero">Home</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+      <div className="nav-logo">KEVIN</div>
+      
+      {/* Hamburger Icon */}
+      <div className={`hamburger ${isOpen ? 'active' : ''}`} onClick={toggleMenu}>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      {/* Nav Links */}
+      <ul className={`nav-links ${isOpen ? 'active' : ''}`}>
+        <li><a onClick={() => scrollToSection('hero')}>Home</a></li>
+        <li><a onClick={() => scrollToSection('projects')}>Projects</a></li>
+        <li><a onClick={() => scrollToSection('contact')}>Contact</a></li>
+      </ul>
     </nav>
-    );
+  );
 }

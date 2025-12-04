@@ -18,6 +18,12 @@ export default function Hero() {
         >
           View Projects
         </button>
+        <button 
+          className="neon-button"
+          onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+        >
+          Get In Touch
+        </button>
       </div>
     </section>
   );
