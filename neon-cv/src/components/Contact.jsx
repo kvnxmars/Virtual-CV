@@ -1,5 +1,14 @@
 // --- components/Contact.jsx ---
 import React, { useState } from 'react';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { 
+  faEnvelope, 
+  faBriefcase, 
+  faCircleCheck, 
+  faUserAstronaut, 
+  faRocket 
+} from "@fortawesome/free-solid-svg-icons";
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -22,8 +31,6 @@ export default function Contact() {
     setIsSubmitting(true);
     setStatus('sending');
 
-    // Option 1: Using Formspree (free, no backend needed)
-    // Sign up at formspree.io and replace YOUR_FORM_ID
     try {
       const response = await fetch('https://formspree.io/f/YOUR_FORM_ID', {
         method: 'POST',
@@ -110,12 +117,12 @@ export default function Contact() {
 
               {status === 'success' && (
                 <div className="status-message success">
-                  ✓ Message sent successfully! I'll get back to you soon.
+                  <FontAwesomeIcon icon={faCircleCheck} /> Message sent successfully!
                 </div>
               )}
               {status === 'error' && (
                 <div className="status-message error">
-                  ✗ Oops! Something went wrong. Please try again or email me directly.
+                  ✗ Oops! Something went wrong. Please try again.
                 </div>
               )}
             </form>
@@ -124,7 +131,7 @@ export default function Contact() {
           {/* Quick Contact Links */}
           <div className="contact-info">
             <div className="contact-card">
-              <div className="contact-icon">📧</div>
+              <FontAwesomeIcon icon={faEnvelope} className="contact-icon" />
               <h3>Email</h3>
               <a href="mailto:unathilubombzmbolongwe@gmail.com" className="contact-link">
                 unathilubombzmbolongwe@gmail.com
@@ -132,7 +139,7 @@ export default function Contact() {
             </div>
 
             <div className="contact-card">
-              <div className="contact-icon">💼</div>
+              <FontAwesomeIcon icon={faLinkedin} className="contact-icon" />
               <h3>LinkedIn</h3>
               <a 
                 href="https://www.linkedin.com/in/unathi-mbolongwe/" 
@@ -145,7 +152,20 @@ export default function Contact() {
             </div>
 
             <div className="contact-card">
-              <div className="contact-icon">🚀</div>
+              <FontAwesomeIcon icon={faGithub} className="contact-icon" />
+              <h3>GitHub</h3>
+              <a 
+                href="https://github.com/kvnxmars" 
+                target="_blank" 
+                rel="noreferrer"
+                className="contact-link"
+              >
+                Check out my projects
+              </a>
+            </div>
+
+            <div className="contact-card">
+              <FontAwesomeIcon icon={faRocket} className="contact-icon" />
               <h3>Status</h3>
               <p className="status-text">
                 <span className="status-dot"></span>

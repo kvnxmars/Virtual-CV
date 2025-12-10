@@ -3,17 +3,18 @@ import React from 'react';
 
 export default function Skills() {
   const technicalSkills = [
-    { category: "Languages", items: ["C#", "Java", "Python"] },
-    { category: "Frameworks", items: [".NET Core", "ASP.NET"] },
-    { category: "Databases", items: ["PostgreSQL", "MongoDB"] },
-    { category: "Web Tech", items: ["React", "Node"] },
-    { category: "Tools", items: ["Git", "GitHub", "VS Code", "Visual Studio"] }
+    { category: "Languages", items: ["C#", "Java", "Python", "JavaScript"] },
+    { category: "Frameworks", items: [".NET Core", "ASP.NET", "SpringBoot"] },
+    { category: "Databases", items: ["MySQL", "PostgreSQL", "MongoDB"] },
+    { category: "Web Tech", items: ["React", "Vue", "Node", "Express"] },
+    { category: "Tools", items: ["Git / GitHub", "Visual Studio / VS Code"] }
   ];
 
   const softSkills = [
     "Communication",
     "Problem Solving",
-    "Teamwork & Collaboration",
+    "Teamwork",
+    "Collaboration",
     "Project Management",
     "Leadership"
   ];

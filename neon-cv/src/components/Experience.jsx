@@ -20,7 +20,7 @@ export default function Experience() {
                 
                 <div className="experience-meta">
                   <span className="date-range">📅 7 July 2025 – 18 July 2025</span>
-                  <span className="location">📍 Sandton, South Africa</span>
+                  <span className="location">📍 Randburg, South Africa</span>
                 </div>
                 
                 <p className="experience-description">

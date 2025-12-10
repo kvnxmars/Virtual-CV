@@ -11,6 +11,7 @@
 
 body {
   margin: 0;
+  text-align: center;
   font-family: 'Orbitron', sans-serif;
   background: #000014;
   color: white;
@@ -837,6 +838,18 @@ body {
   box-shadow: 0 0 20px cyan;
 }
 
+.project-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.project-link:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px cyan, 0 0 40px magenta;
+}
+
 .project-grid {
   margin-top: 80px;
   display: grid;
@@ -950,6 +963,12 @@ body {
   box-sizing: border-box;
 }
 
+.contact-icon {
+  font-size: 2rem;
+  color: cyan;
+  text-shadow: 0 0 10px cyan;
+  margin-bottom: 10px;
+}
 .contact-form {
   display: flex;
   flex-direction: column;

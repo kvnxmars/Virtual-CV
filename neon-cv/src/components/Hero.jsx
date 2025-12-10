@@ -6,8 +6,12 @@ export default function Hero() {
     <section id="hero" className="hero-section">
       <div className="hero-content">
         <div className="hero-image-container">
-          <div className="image-placeholder">
-            <span className="placeholder-text">YOUR PHOTO</span>
+          <div className="hero-image-container">
+          <img 
+            src="/bathroompic.jpg" 
+            alt="Kevin Mbolongwe"
+            className="hero-image"
+          />
           </div>
         </div>
         <h1 className="glow-text">KEVIN MBOLONGWE</h1>
@@ -24,6 +28,14 @@ export default function Hero() {
         >
           Get In Touch
         </button>
+        <a className="cv"
+          href="/Physical_CV.pdf" 
+          download="Kevin_Mbolongwe_CV.pdf"
+          className="neon-button"
+          style={{ display: 'inline-block', textDecoration: 'none' }}
+        >
+          Download My CV
+        </a>
       </div>
     </section>
   );
