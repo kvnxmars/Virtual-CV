@@ -14,7 +14,7 @@ export default function Hero() {
           />
           </div>
         </div>
-        <h1 className="glow-text">KEVIN MBOLONGWE</h1>
+        <h1 className="glow-text">UNATHI KEVIN MBOLONGWE</h1>
         <p className="subtext">Software Developer • Futuristic UI Lover • Full Stack Builder</p>
         <button 
           className="neon-button"
