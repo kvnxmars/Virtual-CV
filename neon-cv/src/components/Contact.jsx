@@ -49,7 +49,7 @@ export default function Contact() {
   return (
     <section id="contact" className="contact-section">
       <div className="contact-container">
-        <h2 className="section-title">GET IN TOUCH</h2>
+        <h2 className="section-title neon">GET IN TOUCH</h2>
         <p className="contact-intro">
           Let's build something amazing together. Whether it's a project, opportunity, or just a chat about tech.
         </p>

@@ -5,7 +5,7 @@ export default function Experience() {
   return (
     <section id="experience" className="experience-section">
       <div className="experience-container">
-        <h2 className="section-title">EXPERIENCE</h2>
+        <h2 className="section-title glow-text">EXPERIENCE</h2>
         
         <div className="timeline">
           {/* Experience Item */}

@@ -21,7 +21,7 @@ export default function Skills() {
   return (
     <section id="skills" className="skills-section">
       <div className="skills-container">
-        <h2 className="section-title">SKILLS</h2>
+        <h2 className="section-title glow-text">SKILLS</h2>
         
         <div className="skills-content">
           {/* Technical Skills */}

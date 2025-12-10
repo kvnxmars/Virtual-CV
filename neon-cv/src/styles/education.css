@@ -1,0 +1,128 @@
+/* ============================================
+   EDUCATION SECTION
+   ============================================ */
+.education-section {
+  padding: 120px 40px;
+  background: linear-gradient(180deg, #000014, #0a0020);
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.education-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.education-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 50px;
+  margin-top: 60px;
+}
+
+.education-card {
+  background: linear-gradient(135deg, rgba(0, 20, 40, 0.8), rgba(20, 0, 40, 0.8));
+  padding: 40px;
+  border: 3px solid transparent;
+  border-image: linear-gradient(135deg, cyan, magenta, yellow) 1;
+  box-shadow: 
+    0 0 40px rgba(0, 255, 255, 0.3),
+    inset 0 0 40px rgba(0, 255, 255, 0.05);
+  position: relative;
+  clip-path: polygon(0 0, 95% 0, 100% 5%, 100% 100%, 5% 100%, 0 95%);
+  transition: all 0.4s;
+}
+
+.education-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 
+    0 20px 60px rgba(0, 255, 255, 0.5),
+    0 0 80px rgba(255, 0, 255, 0.4);
+  border-image: linear-gradient(135deg, magenta, cyan, yellow) 1;
+}
+
+.card-corner-accent {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 30px;
+  height: 30px;
+  border-top: 3px solid cyan;
+  border-right: 3px solid cyan;
+  box-shadow: 0 0 15px cyan;
+}
+
+.degree-icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  filter: drop-shadow(0 0 20px rgba(0, 255, 255, 0.5));
+}
+
+.degree-title {
+  font-size: 1.6rem;
+  color: cyan;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+  text-shadow: 0 0 15px cyan;
+}
+
+.institution {
+  font-size: 1.2rem;
+  color: magenta;
+  font-weight: 700;
+  margin-bottom: 10px;
+  text-shadow: 0 0 10px magenta;
+}
+
+.education-dates {
+  color: #b6e7ff;
+  font-size: 0.95rem;
+  margin-bottom: 20px;
+}
+
+.degree-divider {
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, cyan, transparent);
+  margin: 20px 0;
+  box-shadow: 0 0 10px cyan;
+}
+
+.education-description {
+  color: #b6e7ff;
+  line-height: 1.8;
+  margin-bottom: 25px;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 8px 20px;
+  font-weight: 900;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  border: 2px solid;
+  clip-path: polygon(5% 0%, 100% 0%, 95% 100%, 0% 100%);
+  animation: badgePulse 2s ease-in-out infinite;
+}
+
+.status-badge.current {
+  background: rgba(0, 255, 0, 0.1);
+  border-color: #00ff00;
+  color: #00ff00;
+  box-shadow: 0 0 15px #00ff00;
+}
+
+.status-badge.completed {
+  background: rgba(0, 255, 255, 0.1);
+  border-color: cyan;
+  color: cyan;
+  box-shadow: 0 0 15px cyan;
+}
+
+@keyframes badgePulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}

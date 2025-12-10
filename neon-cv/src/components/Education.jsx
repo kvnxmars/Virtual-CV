@@ -5,7 +5,7 @@ export default function Education() {
   return (
     <section id="education" className="education-section">
       <div className="education-container">
-        <h2 className="section-title">EDUCATION</h2>
+        <h2 className="section-title glow-text">EDUCATION</h2>
         
         <div className="education-grid">
           {/* BSc IT */}
@@ -20,7 +20,7 @@ export default function Education() {
               Currently pursuing a Bachelor of Science in Information Technology, focusing on 
               developing robust software solutions and understanding complex IT systems.
             </p>
-            <div className="status-badge current">IN PROGRESS</div>
+            <div className="status-badge completed">COMPLETED</div>
           </div>
 
           {/* High School */}
