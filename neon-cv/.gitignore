@@ -1,24 +1,44 @@
-# Logs
-logs
-*.log
+# Node
+node_modules/
+**/node_modules/
+
+# Log files
 npm-debug.log*
 yarn-debug.log*
-yarn-error.log*
 pnpm-debug.log*
-lerna-debug.log*
+yarn-error.log*
+logs/
+*.log
 
-node_modules
-dist
-dist-ssr
-*.local
+# Environment files (include all .env variants)
+**/.env
+**/.env.*
+!.env.example
 
-# Editor directories and files
-.vscode/*
-!.vscode/extensions.json
-.idea
+# Build / output
+dist/
+build/
+out/
+.vite/
+.vite-temp/
+*.tsbuildinfo
+
+# OS files
 .DS_Store
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
+Thumbs.db
+desktop.ini
+
+# IDE/editor
+.vscode/
+.idea/
+*.sublime-*
+
+# Test / coverage
+coverage/
+.nyc_output/
+test-results/
+
+# Misc sensitive / binary
+*.pem
+*.key
+*.p12
