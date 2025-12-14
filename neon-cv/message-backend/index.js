@@ -6,7 +6,7 @@ const cors = require('cors');
 const Joi = require('joi');
 
 const { sendEmail } = require('./mailer');
-const { connectDb, Message } = require('./storage'); // optional
+//const { connectDb, Message } = require('./storage'); // optional
 
 const app = express();
 const PORT = process.env.PORT || 4000;
@@ -27,12 +27,14 @@ const limiter = rateLimit({
 });
 app.use(limiter);
 
+/*
 // Connect to DB optionally
 if (process.env.MONGO_URI) {
   connectDb(process.env.MONGO_URI).catch(err => {
     console.error('Mongo connection error:', err.message);
   });
 }
+*/
 
 // Validation schema
 const messageSchema = Joi.object({
@@ -52,6 +54,7 @@ app.post('/api/messages', async (req, res) => {
 
   const { name, email, subject = 'Website Message', message } = value;
 
+  /*
   // Persist (optional)
   let saved = null;
   if (process.env.MONGO_URI) {
@@ -62,6 +65,7 @@ app.post('/api/messages', async (req, res) => {
       // don't fail the request because DB failed — proceed with email
     }
   }
+    */
 
   // Send email notification
   try {
@@ -79,7 +83,7 @@ app.post('/api/messages', async (req, res) => {
     return res.status(500).json({ error: 'Failed to send notification email' });
   }
 
-  res.json({ ok: true, savedId: saved ? saved._id : null });
+  res.json({ ok: true });
 });
 
 // Start server
