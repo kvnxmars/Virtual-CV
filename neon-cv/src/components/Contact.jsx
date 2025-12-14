@@ -32,7 +32,7 @@ export default function Contact() {
     setStatus('sending');
 
     try {
-      const response = await fetch('https://formspree.io/f/YOUR_FORM_ID', {
+      const response = await fetch('https://virtual-cv-hxav.onrender.com/api/messages', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

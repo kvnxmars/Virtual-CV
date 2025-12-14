@@ -13,6 +13,7 @@ logs/
 # Environment files (include all .env variants)
 **/.env
 **/.env.*
+message-backend/.env
 !.env.example
 
 # Build / output
@@ -42,3 +43,5 @@ test-results/
 *.pem
 *.key
 *.p12
+
+.vercel
