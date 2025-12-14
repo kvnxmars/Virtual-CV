@@ -9,7 +9,7 @@ const { sendEmail } = require('./mailer');
 //const { connectDb, Message } = require('./storage'); // optional
 
 const app = express();
-const PORT = process.env.PORT || 4000;
+const PORT = process.env.PORT;
 
 // Security middlewares
 app.use(helmet());
@@ -26,6 +26,11 @@ const limiter = rateLimit({
   legacyHeaders: false
 });
 app.use(limiter);
+
+app.use((req, res, next) => {
+  console.log(new Date().toISOString(), req.method, req.path, req.body);
+  next();
+});
 
 /*
 // Connect to DB optionally
@@ -72,7 +77,7 @@ app.post('/api/messages', async (req, res) => {
     await sendEmail({
       to: process.env.NOTIFY_TO,
       from: process.env.NOTIFY_FROM || process.env.SMTP_USER || 'no-reply@example.com',
-      subject: `[Website] ${subject} — ${name}`,
+      subject: `[Portfolio Site Message]`,
       text: `New message from ${name} <${email}>\n\n${message}`,
       html: `<p><strong>From:</strong> ${name} &lt;${email}&gt;</p>
              <p><strong>Subject:</strong> ${subject}</p>

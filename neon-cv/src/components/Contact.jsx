@@ -10,6 +10,8 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
+const API_URL = import.meta.env.VITE_API_URL;
+
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: '',
@@ -32,7 +34,7 @@ export default function Contact() {
     setStatus('sending');
 
     try {
-      const response = await fetch('https://virtual-cv-hxav.onrender.com/api/messages', {
+      const response = await fetch(`${API_URL}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
