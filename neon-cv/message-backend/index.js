@@ -5,93 +5,52 @@ const rateLimit = require('express-rate-limit');
 const cors = require('cors');
 const Joi = require('joi');
 
-const { sendEmail } = require('./mailer');
-//const { connectDb, Message } = require('./storage'); // optional
+const connectDb = require('./db');
+const Message = require('./model/Message');
 
 const app = express();
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 4000;
 
-// Security middlewares
+// Middleware
 app.use(helmet());
 app.use(express.json({ limit: '10kb' }));
-app.use(cors({
-  origin: process.env.CORS_ORIGIN || '*' // tighten in production
+app.use(cors({ origin: '*' }));
+
+app.use(rateLimit({
+  windowMs: 60 * 1000,
+  max: 100
 }));
 
-// Rate limiting (basic anti-abuse)
-const limiter = rateLimit({
-  windowMs: 60 * 1000, // 1 minute
-  max: 100, // change as needed
-  standardHeaders: true,
-  legacyHeaders: false
-});
-app.use(limiter);
-
-app.use((req, res, next) => {
-  console.log(new Date().toISOString(), req.method, req.path, req.body);
-  next();
+// 🔥 CONNECT TO MONGO
+connectDb(process.env.MONGO_URI).catch(err => {
+  console.error('MongoDB connection failed:', err.message);
 });
 
-/*
-// Connect to DB optionally
-if (process.env.MONGO_URI) {
-  connectDb(process.env.MONGO_URI).catch(err => {
-    console.error('Mongo connection error:', err.message);
-  });
-}
-*/
-
-// Validation schema
+// Validation
 const messageSchema = Joi.object({
-  name: Joi.string().min(1).max(100).required(),
+  name: Joi.string().required(),
   email: Joi.string().email().required(),
-  subject: Joi.string().max(150).allow('').optional(),
-  message: Joi.string().min(1).max(5000).required()
+  message: Joi.string().required()
 });
 
-// Health
+// Health check
 app.get('/health', (req, res) => res.json({ ok: true }));
 
-// POST /api/messages - receive a message
+// Save message
 app.post('/api/messages', async (req, res) => {
-  const { error, value } = messageSchema.validate(req.body);
-  if (error) return res.status(400).json({ error: error.details[0].message });
-
-  const { name, email, subject = 'Website Message', message } = value;
-
-  /*
-  // Persist (optional)
-  let saved = null;
-  if (process.env.MONGO_URI) {
-    try {
-      saved = await Message.create({ name, email, subject, message, createdAt: new Date() });
-    } catch (err) {
-      console.warn('DB save failed:', err.message);
-      // don't fail the request because DB failed — proceed with email
-    }
-  }
-    */
-
-  // Send email notification
   try {
-    await sendEmail({
-      to: process.env.NOTIFY_TO,
-      from: process.env.NOTIFY_FROM || process.env.SMTP_USER || 'no-reply@example.com',
-      subject: `[Portfolio Site Message]`,
-      text: `New message from ${name} <${email}>\n\n${message}`,
-      html: `<p><strong>From:</strong> ${name} &lt;${email}&gt;</p>
-             <p><strong>Subject:</strong> ${subject}</p>
-             <pre style="white-space:pre-wrap">${message}</pre>`
-    });
-  } catch (err) {
-    console.error('Email send failed:', err);
-    return res.status(500).json({ error: 'Failed to send notification email' });
-  }
+    const { error, value } = messageSchema.validate(req.body);
+    if (error) return res.status(400).json({ error: error.details[0].message });
 
-  res.json({ ok: true });
+    await Message.create(value);
+    res.json({ ok: true });
+
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: 'Server error' });
+  }
 });
 
-// Start server
 app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
+  console.log(`🚀 Server running on port ${PORT}`);
 });
