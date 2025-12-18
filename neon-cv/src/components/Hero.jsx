@@ -5,37 +5,51 @@ export default function Hero() {
   return (
     <section id="hero" className="hero-section">
       <div className="hero-content">
-        <div className="hero-image-container">
+        
+        {/* HERO IMAGE */}
           <div className="hero-image-container">
           <img 
             src="/bathroompic.jpg" 
             alt="Kevin Mbolongwe"
-            className="hero-image"
           />
           </div>
-        </div>
+
+        {/* HERO TEXT */}
         <h1 className="glow-text">KEVIN MBOLONGWE</h1>
-        <p className="subtext">Software Developer • Futuristic UI Lover • Full Stack Builder</p>
-        <button 
-          className="neon-button"
-          onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
-        >
-          View Projects
-        </button>
-        <button 
-          className="neon-button"
-          onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-        >
-          Get In Touch
-        </button>
-        <a 
-          href="/Physical_CV.pdf" 
-          download="Kevin_Mbolongwe_CV.pdf"
-          className="neon-button"
-          style={{ display: 'inline-block', textDecoration: 'none' }}
-        >
-          Download My CV
-        </a>
+
+        <p className="subtext">
+          Aspiring Software Developer • UI/UX Designer • Backend Developer • Full Stack Builder
+          </p>
+
+        {/* HERO ACTIONS */}
+        <div className="hero-buttons">
+  <button
+    className="neon-button"
+    onClick={() =>
+      document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })
+    }
+  >
+    View Projects
+  </button>
+
+  <button
+    className="neon-button"
+    onClick={() =>
+      document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })
+    }
+  >
+    Get In Touch
+  </button>
+
+  <button
+    className="neon-button"
+    onClick={() => window.open('/Physical_CV.pdf', '_blank')}
+  >
+    Download My CV
+  </button>
+</div>
+
+
       </div>
     </section>
   );

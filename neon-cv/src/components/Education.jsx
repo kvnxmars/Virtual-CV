@@ -17,8 +17,8 @@ export default function Education() {
             <p className="education-dates">February 2022 - November 2025</p>
             <div className="degree-divider"></div>
             <p className="education-description">
-              Currently pursuing a Bachelor of Science in Information Technology, focusing on 
-              developing robust software solutions and understanding complex IT systems.
+              Completed a Bachelor of Science in Information Technology, focusing on 
+              developing robust software solutions and understanding complex data and software systems.
             </p>
             <div className="status-badge completed">COMPLETED</div>
           </div>
