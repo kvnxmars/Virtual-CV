@@ -146,7 +146,7 @@ export default function Contact() {
               <a 
                 href="https://www.linkedin.com/in/unathi-mbolongwe/" 
                 target="_blank" 
-                rel="noreferrer"
+                
                 className="contact-link"
               >
                 Connect with me
@@ -159,7 +159,7 @@ export default function Contact() {
               <a 
                 href="https://github.com/kvnxmars" 
                 target="_blank" 
-                rel="noreferrer"
+                
                 className="contact-link"
               >
                 Check out my projects
