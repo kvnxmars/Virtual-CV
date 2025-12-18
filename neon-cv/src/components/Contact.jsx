@@ -135,7 +135,8 @@ export default function Contact() {
             <div className="contact-card">
               <FontAwesomeIcon icon={faEnvelope} className="contact-icon" />
               <h3>Email</h3>
-              <a href="mailto:unathilubombzmbolongwe@gmail.com" className="contact-link">
+              <a href="mailto:unathilubombzmbolongwe@gmail.com" 
+              className="contact-link">
                 unathilubombzmbolongwe@gmail.com
               </a>
             </div>
@@ -145,8 +146,7 @@ export default function Contact() {
               <h3>LinkedIn</h3>
               <a 
                 href="https://www.linkedin.com/in/unathi-mbolongwe/" 
-                target="_blank" 
-                
+                target="_blank"
                 className="contact-link"
               >
                 Connect with me
@@ -159,7 +159,6 @@ export default function Contact() {
               <a 
                 href="https://github.com/kvnxmars" 
                 target="_blank" 
-                
                 className="contact-link"
               >
                 Check out my projects
