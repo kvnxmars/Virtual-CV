@@ -43,7 +43,7 @@ export default function Hero() {
 
   <button
     className="neon-button"
-    onClick={() => window.open('/Physical_CV.pdf', '_blank')}
+    onClick={() => window.open('/Unathi Kevin Mbolongwe CV.pdf', '_blank')}
   >
     Download My CV
   </button>
