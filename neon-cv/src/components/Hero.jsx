@@ -9,7 +9,7 @@ export default function Hero() {
         {/* HERO IMAGE */}
           <div className="hero-image-container">
           <img 
-            src="/bathroompic.jpg" 
+            src="/proP.jpg" 
             alt="Kevin Mbolongwe"
           />
           </div>
@@ -18,8 +18,11 @@ export default function Hero() {
         <h1 className="glow-text">KEVIN MBOLONGWE</h1>
 
         <p className="subtext">
-          Aspiring Software Developer • UI/UX Designer • Backend Developer • Full Stack Builder
-          </p>
+          <span><i className="fa-solid fa-laptop-code"></i> Software Developer</span>
+          <span><i className="fa-solid fa-palette"></i> UI/UX Designer</span>
+          <span><i className="fa-solid fa-server"></i> Backend Systems</span>
+          <span><i className="fa-solid fa-layer-group"></i> Full Stack Systems</span>
+        </p>
 
         {/* HERO ACTIONS */}
         <div className="hero-buttons">
