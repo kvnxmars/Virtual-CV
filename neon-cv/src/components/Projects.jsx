@@ -38,17 +38,7 @@ export default function Projects() {
           </p>
 
           <div className="project-buttons">
-            <button 
-              className="neon-button small" 
-              onClick={() =>
-                window.open(
-                  "https://rebrand.ly/fitnwu095d84",
-                  "_blank"
-                )
-              }>
-              Live Demo
-            </button>
-
+            
             <button
               className="neon-button small"
               onClick={() =>
