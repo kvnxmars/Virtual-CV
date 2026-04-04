@@ -1,4 +1,66 @@
-# React + TypeScript + Vite
+# Neon CV - Frontend
+
+The frontend component of the Virtual CV & Portfolio project. A modern React application featuring neon-themed design, 3D animations, and interactive portfolio sections.
+
+## 🚀 Quick Start
+
+```bash
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+# Build for production
+npm run build
+
+# Preview production build
+npm run preview
+```
+
+## 🛠️ Tech Stack
+
+- **React 19** with modern hooks and concurrent features
+- **Vite** for fast development and optimized builds
+- **Three.js** + **React Three Fiber** for 3D graphics
+- **Framer Motion** for smooth animations
+- **FontAwesome** for icons
+- **CSS3** with custom neon effects
+
+## 📁 Structure
+
+```
+neon-cv/
+├── src/
+│   ├── components/     # React components
+│   ├── styles/         # CSS stylesheets
+│   ├── App.jsx         # Main app component
+│   └── main.jsx        # App entry point
+├── public/             # Static assets
+├── message-backend/    # Backend API (co-located)
+├── package.json
+├── vite.config.js
+└── .env               # Environment variables
+```
+
+## 🔧 Environment Setup
+
+Create a `.env` file in the root directory:
+
+```env
+VITE_API_URL=https://your-backend-url.onrender.com
+```
+
+## 🚀 Deployment
+
+This project is configured for Vercel deployment. Connect your GitHub repository to Vercel for automatic deployments.
+
+## 📝 Notes
+
+- The backend API is located in the `message-backend/` directory
+- 3D animations are performance-optimized
+- Responsive design works across all devices
+- Contact form integrates with the backend API
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
