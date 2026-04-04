@@ -1,6 +1,6 @@
 # Neon CV - Frontend
 
-[![Live Demo](https://img.shields.io/badge/Live_Demo-Visit_Now-00eaff?style=for-the-badge&logo=vercel)](https://virtual-cv-hxav.vercel.app/)
+[![Live Demo](https://img.shields.io/badge/Live_Demo-Visit_Now-00eaff?style=for-the-badge&logo=vercel)](neon-cv.vercel.app/)
 
 The frontend component of the Virtual CV & Portfolio project. A modern React application featuring neon-themed design, 3D animations, and interactive portfolio sections.
 
@@ -26,7 +26,7 @@ This React application serves as the visual interface for Unathi Kevin Mbolongwe
 
 ## 🚀 Live Version
 
-**View the live portfolio:** [https://virtual-cv-hxav.vercel.app/](https://virtual-cv-hxav.vercel.app/)
+**View the live portfolio:** [neon-cv.vercel.app/](neon-cv.vercel.app/)
 
 ## 📁 Key Components
 

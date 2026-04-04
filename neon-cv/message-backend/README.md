@@ -91,23 +91,7 @@ npm run dev
 npm start
 ```
 
-### Environment Configuration
 
-Create a `.env` file:
-```env
-PORT=4000
-MONGO_URI=mongodb://localhost:27017/virtual-cv
-# Or for MongoDB Atlas:
-# MONGO_URI=mongodb+srv://username:password@cluster.mongodb.net/virtual-cv
-
-# Email configuration (optional)
-EMAIL_PROVIDER=smtp
-SMTP_HOST=smtp.gmail.com
-SMTP_PORT=587
-SMTP_SECURE=false
-SMTP_USER=your-email@gmail.com
-SMTP_PASS=your-app-password
-```
 
 ## 📝 Notes
 

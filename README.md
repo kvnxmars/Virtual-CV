@@ -2,7 +2,7 @@
 
 🌟 **Unathi Kevin Mbolongwe's Interactive Portfolio**
 
-[![Live Demo](https://img.shields.io/badge/Live_Demo-Visit_Now-00eaff?style=for-the-badge&logo=vercel)](https://virtual-cv-hxav.vercel.app/)
+[![Live Demo](https://img.shields.io/badge/Live_Demo-Visit_Now-00eaff?style=for-the-badge&logo=vercel)](neon-cv.vercel.app/)
 [![GitHub](https://img.shields.io/badge/GitHub-View_Code-181717?style=for-the-badge&logo=github)](https://github.com/kvnxmars/Virtual-CV)
 
 A modern, neon-themed personal portfolio website built with React, featuring 3D animations and a contact backend system. This project showcases full-stack development skills with a focus on interactive web experiences.
