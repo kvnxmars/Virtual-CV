@@ -367,6 +367,51 @@ body {
   }
 }
 
+.hero-section::after {
+  content: "1010 1101 0110 1001 1110 0010 1011 0101 0011 1001 0111 0101 1010 0011 1100 0101 \a"
+           "0101 1010 1000 1101 0010 1111 0110 1011 0011 1110 0100 1010 1100 0111 1001 0010 1111";
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 10px;
+  line-height: 1.4;
+  letter-spacing: 0.18em;
+  color: rgba(133, 161, 255, 0.3);
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  right: -20px;
+  bottom: -20px;
+  white-space: pre-wrap;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.18;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent 0,
+    transparent 18px,
+    rgba(133, 161, 255, 0.08) 18px,
+    rgba(133, 161, 255, 0.08) 19px
+  ),
+  repeating-linear-gradient(
+    90deg,
+    transparent 0,
+    transparent 30px,
+    rgba(133, 161, 255, 0.04) 30px,
+    rgba(133, 161, 255, 0.04) 31px
+  );
+  mix-blend-mode: screen;
+  backdrop-filter: blur(1px);
+  animation: driftCode 24s linear infinite;
+}
+
+@keyframes driftCode {
+  0%   { transform: translateY(0); }
+  100% { transform: translateY(-110px); }
+}
+
 .hero-content {
   position: relative;
   z-index: 1;

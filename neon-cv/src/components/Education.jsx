@@ -11,7 +11,7 @@ export default function Education() {
           {/* BSc IT */}
           <div className="education-card">
             <div className="card-corner-accent"></div>
-            <div className="degree-icon">🎓</div>
+            <div className="degree-icon"></div>
             <h3 className="degree-title">BSc Information Technology</h3>
             <p className="institution">North-West University</p>
             <p className="education-dates">February 2022 - November 2025</p>
@@ -26,7 +26,7 @@ export default function Education() {
           {/* High School */}
           <div className="education-card">
             <div className="card-corner-accent"></div>
-            <div className="degree-icon">📚</div>
+            <div className="degree-icon"></div>
             <h3 className="degree-title">National Senior Certificate</h3>
             <p className="institution">Randfontein High School</p>
             <p className="education-dates">January 2017 - December 2021</p>

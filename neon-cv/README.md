@@ -1,6 +1,66 @@
-# React + TypeScript + Vite
+# Neon CV - Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[![Live Demo](https://img.shields.io/badge/Live_Demo-Visit_Now-00eaff?style=for-the-badge&logo=vercel)](neon-cv.vercel.app/)
+
+The frontend component of the Virtual CV & Portfolio project. A modern React application featuring neon-themed design, 3D animations, and interactive portfolio sections.
+
+## ✨ What This Is
+
+This React application serves as the visual interface for Unathi Kevin Mbolongwe's interactive portfolio, featuring:
+
+- **Neon Cyberpunk Theme**: Glowing effects and futuristic design
+- **3D Animations**: Interactive Three.js scenes with floating geometric shapes
+- **Responsive Design**: Optimized for all devices and screen sizes
+- **Smooth Interactions**: Framer Motion animations throughout
+- **Contact Integration**: Form that connects to the backend API
+- **Modern React**: Built with React 19 and Vite for optimal performance
+
+## 🛠️ Tech Stack
+
+- **React 19** with modern hooks and concurrent features
+- **Vite** for fast development and optimized builds
+- **Three.js + React Three Fiber** for 3D graphics
+- **Framer Motion** for smooth animations
+- **FontAwesome** for icons
+- **CSS3** with custom neon effects
+
+## 🚀 Live Version
+
+**View the live portfolio:** [neon-cv.vercel.app/](neon-cv.vercel.app/)
+
+## 📁 Key Components
+
+- **Hero**: Landing section with profile and call-to-action
+- **About**: Personal introduction and background
+- **Education**: Academic background
+- **Experience**: Professional work history
+- **Skills**: Technical skills showcase
+- **Projects**: Portfolio of development projects
+- **Contact**: Interactive contact form
+- **ThreeScene**: 3D animated background elements
+
+## 🔧 For Developers
+
+### Quick Local Development
+
+```bash
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+# Build for production
+npm run build
+```
+
+
+## 📝 Notes
+
+- The backend API is located in the `message-backend/` directory
+- 3D animations are performance-optimized
+- Responsive design works across all devices
+- Contact form integrates with the backend API
 
 Currently, two official plugins are available:
 

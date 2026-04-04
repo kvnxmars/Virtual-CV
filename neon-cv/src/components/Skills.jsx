@@ -28,7 +28,7 @@ export default function Skills() {
           {/* Technical Skills */}
           <div className="skills-panel technical-panel">
             <div className="panel-header">
-              <h3>⚡ TECHNICAL ARSENAL</h3>
+              <h3> TECHNICAL ARSENAL</h3>
             </div>
             <div className="panel-body">
               {technicalSkills.map((skillGroup, index) => (
@@ -49,7 +49,7 @@ export default function Skills() {
           {/* Soft Skills */}
           <div className="skills-panel soft-panel">
             <div className="panel-header">
-              <h3>💎 SOFT SKILLS</h3>
+              <h3> SOFT SKILLS</h3>
             </div>
             <div className="panel-body">
               <div className="soft-skills-grid">

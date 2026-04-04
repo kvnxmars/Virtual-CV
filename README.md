@@ -1,95 +1,151 @@
-Unathi Kevin Mbolongwe's Virtual CV & Portfolio
+# Virtual CV & Portfolio
 
+🌟 **Unathi Kevin Mbolongwe's Interactive Portfolio**
 
-🌟 Overview
-This repository hosts my personal portfolio website, serving as a dynamic and interactive online CV. Designed and built from the ground up, this site showcases my technical skills, academic background, professional experience, and key projects. It's a direct demonstration of my proficiency in front-end development, responsive design, and modern web practices.
+[![Live Demo](https://img.shields.io/badge/Live_Demo-Visit_Now-00eaff?style=for-the-badge&logo=vercel)](neon-cv.vercel.app/)
+[![GitHub](https://img.shields.io/badge/GitHub-View_Code-181717?style=for-the-badge&logo=github)](https://github.com/kvnxmars/Virtual-CV)
 
-The goal of this project is to provide a comprehensive, easy-to-navigate overview of my capabilities as a BSc IT student and aspiring Software Development | Systems Analyst | Full-stack Developer.
+A modern, neon-themed personal portfolio website built with React, featuring 3D animations and a contact backend system. This project showcases full-stack development skills with a focus on interactive web experiences.
 
-✨ Features
-Responsive Design: Optimized for seamless viewing across various devices (desktops, tablets, and mobile phones).
+## 🚀 Live Demo
 
-Intuitive Navigation: Smooth scrolling navigation to different sections of the CV.
+**Visit the live portfolio:** [neon-cv.vercel.app/](neon-cv.vercel.app/)
 
-Dynamic Hero Section: Engaging typing animation for the main heading, adding a personalized touch.
+## ✨ What This Project Is
 
-Scroll-Reveal Animations: Subtle animations for sections as they come into view, enhancing user experience.
+This repository contains a complete portfolio solution demonstrating modern web development practices:
 
-Interactive Project Display: A dedicated section to highlight key projects, each linked to their respective repositories or live demos.
+- **Frontend**: React application with Vite, featuring neon aesthetics, 3D Three.js animations, and responsive design
+- **Backend**: Node.js/Express API for handling contact form submissions with MongoDB storage
+- **Deployment**: Frontend on Vercel, Backend on Render
 
-Contact Options: Easy access to my professional contact information and social profiles.
+### Key Features
+- **Responsive Design**: Optimized for all devices (desktop, tablet, mobile)
+- **Neon Theme**: Cyberpunk-inspired design with glowing effects
+- **3D Animations**: Interactive Three.js scenes with floating geometric shapes
+- **Smooth Animations**: Framer Motion for page transitions and scroll effects
+- **Interactive Sections**: Hero, About, Education, Experience, Skills, Projects, Contact
+- **Contact System**: Full-stack contact form with database storage
+- **Modern Tech Stack**: React 19, Vite, Three.js, Node.js, MongoDB
 
-Back to Top Button: Convenient navigation back to the top of the page for long scrolls.
+## 🛠️ Technology Stack
 
-Live GitHub Activity Status: A unique "flex" feature displaying my most recent public GitHub activity in the footer, powered directly by the GitHub API.
+### Frontend
+- **React 19** - Modern React with hooks and concurrent features
+- **Vite** - Fast build tool and development server
+- **Three.js + React Three Fiber** - 3D graphics and animations
+- **Framer Motion** - Animation library for smooth transitions
+- **FontAwesome** - Icon library for UI elements
+- **CSS3** - Custom styling with neon effects and responsive design
 
-🚀 Technologies Used
-Frontend:
+### Backend
+- **Node.js + Express** - REST API server
+- **MongoDB + Mongoose** - NoSQL database and ODM
+- **Joi** - Input validation
+- **Nodemailer** - Email service (configured for SMTP/SendGrid)
+- **Helmet** - Security middleware
+- **Express Rate Limit** - API rate limiting
+- **CORS** - Cross-origin resource sharing
 
-HTML5: Semantic structure and content.
+### DevOps & Tools
+- **Vercel** - Frontend deployment and hosting
+- **Render** - Backend deployment and hosting
+- **ESLint** - Code linting and formatting
+- **Git** - Version control
 
-CSS3: Styling and responsive design (including media queries).
+## 📁 Project Structure
 
-JavaScript (ES6+): For interactive elements, animations, and API integrations.
+```
+Virtual-CV/
+├── README.md                    # Main project README
+├── neon-cv/                     # Frontend React application
+│   ├── public/                  # Static assets
+│   ├── src/
+│   │   ├── components/          # React components
+│   │   │   ├── Hero.jsx        # Landing section
+│   │   │   ├── About.jsx       # About section
+│   │   │   ├── Education.jsx   # Education background
+│   │   │   ├── Experience.jsx  # Work experience
+│   │   │   ├── Skills.jsx      # Technical skills
+│   │   │   ├── Projects.jsx    # Project showcase
+│   │   │   ├── Contact.jsx     # Contact form
+│   │   │   ├── ThreeScene.jsx  # 3D background
+│   │   │   └── Navbar.jsx      # Navigation component
+│   │   ├── App.jsx             # Main app component
+│   │   └── styles/             # CSS stylesheets
+│   ├── message-backend/         # Backend API
+│   │   ├── db.js               # Database connection
+│   │   ├── index.js            # Express server
+│   │   ├── mailer.js           # Email service
+│   │   ├── model/Message.js    # Message schema
+│   │   └── package.json        # Backend dependencies
+│   ├── package.json            # Frontend dependencies
+│   ├── vite.config.js          # Vite configuration
+│   └── .env                    # Environment variables
+```
 
-API Integration:
+## 🔧 For Developers
 
-GitHub REST API: Fetches and displays real-time public activity.
+### Prerequisites
+- Node.js (v16 or higher)
+- npm or yarn
+- MongoDB (local or cloud instance like MongoDB Atlas)
+- Git
 
-Version Control:
+### Quick Local Setup
 
-Git: For source code management.
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/kvnxmars/Virtual-CV.git
+   cd Virtual-CV/neon-cv
+   ```
 
-GitHub: For hosting the repository and deploying via GitHub Pages.
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-Development Tools: Visual Studio Code
+3. **Environment Configuration**
+   Create a `.env` file in the `neon-cv` directory:
+   
 
-📦 Getting Started
-This is a static website, making it incredibly easy to view and deploy.
+4. **Start development**
+   ```bash
+   npm run dev
+   ```
+   The frontend will be available at `http://localhost:5173`
 
-Viewing Locally
-Clone the repository:
+### Backend Setup (Optional)
+For full local development, also set up the backend:
+```bash
+cd message-backend
+npm install
+npm run dev
+```
 
-Bash
+## 🤝 Contributing
 
-git clone https://github.com/kvnxmars/Virtual-CV.git
-cd Virtual-CV
-Open in Browser:
-Simply open the index.html file in your preferred web browser. No local server or complex setup is required.
+This is a personal portfolio project, but feedback and suggestions are welcome!
 
-Deployment (GitHub Pages)
-This project is configured for seamless deployment using GitHub Pages. Any changes pushed to the main branch are automatically deployed.
+1. Fork the repository
+2. Create a feature branch: `git checkout -b feature/amazing-feature`
+3. Commit your changes: `git commit -m 'Add amazing feature'`
+4. Push to the branch: `git push origin feature/amazing-feature`
+5. Open a Pull Request
 
-The live version of this portfolio can be accessed here: https://kvnxmars.github.io/Virtual-CV/
+## 📜 License
 
-🖥️ Usage
-Navigate through the site using the top navigation bar to jump to specific sections (About Me, Experience, Education, Skills, Projects, Contact).
+This project is open-sourced under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-Scroll down to explore the content. Sections will animate into view.
+## 📞 Contact
 
-Click the "Back to Top" button that appears on scroll to quickly return to the header.
+**Unathi Kevin Mbolongwe**
 
-Check the footer for my live GitHub activity status.
+- **Portfolio**: [neon-cv.vercel.app/](neon-cv.vercel.app/)
+- **Email**: unathilubombzmbolongwe@gmail.com
+- **LinkedIn**: [linkedin.com/in/unathi-mbolongwe](https://www.linkedin.com/in/unathi-mbolongwe/)
+- **GitHub**: [github.com/kvnxmars](https://github.com/kvnxmars)
 
-Click on project cards to visit their respective GitHub repositories or live demos.
+---
 
-🤝 Contributing
-While this is a personal portfolio, I'm always open to feedback and suggestions! If you have any ideas for improvements or find any issues, feel free to:
-
-Open an issue on this repository.
-
-Submit a pull request with your suggested changes.
-
-📜 License
-This project is open-sourced under the MIT License - see the LICENSE file for details.
-
-📞 Contact
-Feel free to connect or reach out!
-
-Unathi Kevin Mbolongwe
-
-LinkedIn: https://www.linkedin.com/in/unathi-mbolongwe/
-
-GitHub: https://github.com/kvnxmars
-
-Email: unathilubombzmbolongwe@gmail.com
+*Built with ❤️ using React, Three.js, and modern web technologies*
