@@ -1,55 +1,62 @@
 // --- components/Education.jsx ---
 import React from 'react';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGraduationCap, faSchool } from "@fortawesome/free-solid-svg-icons";
 
 export default function Education() {
   return (
     <section id="education" className="education-section">
       <div className="education-container">
         <h2 className="section-title glow-text">EDUCATION</h2>
-        
+
         <div className="education-grid">
-          {/* Bsc (Hons) Computer Science */}
+          {/* BSc (Hons) Computer Science */}
           <div className="education-card">
             <div className="card-corner-accent"></div>
-            <div className="degree-icon"></div>
+            <div className="degree-icon"><FontAwesomeIcon icon={faGraduationCap} /></div>
             <h3 className="degree-title">BSc Honours Computer Science</h3>
-            <p className="institution">University Pretoria</p>
-            <p className="education-dates">February 2026 - November 2026</p>
+            <p className="institution">University of Pretoria</p>
+            <p className="education-dates">February 2026 – November 2026</p>
             <div className="degree-divider"></div>
             <p className="education-description">
               Currently completing an Honours in Computer Science with a strong focus on Data, Software and AI systems. Modules include Information Security, Software Engineering, AI II and Data Mining.
             </p>
-            <div className="status-badge in progress">In Progress</div>
+            {/* Was className="status-badge in progress" — two space-separated
+                classes ("in" and "progress"), neither of which matches the
+                .status-badge.current / .status-badge.completed rules in the
+                stylesheet, so this badge was rendering with no status color
+                at all. Fixed to the class the CSS actually defines. */}
+            <div className="status-badge current">In Progress</div>
           </div>
-          
+
           {/* BSc IT */}
           <div className="education-card">
             <div className="card-corner-accent"></div>
-            <div className="degree-icon"></div>
+            <div className="degree-icon"><FontAwesomeIcon icon={faGraduationCap} /></div>
             <h3 className="degree-title">BSc Information Technology</h3>
             <p className="institution">North-West University</p>
-            <p className="education-dates">February 2022 - November 2025</p>
+            <p className="education-dates">February 2022 – November 2025</p>
             <div className="degree-divider"></div>
             <p className="education-description">
-              Completed a Bachelor of Science in Information Technology, focusing on 
+              Completed a Bachelor of Science in Information Technology, focusing on
               developing robust software solutions and understanding complex data and software systems.
             </p>
-            <div className="status-badge completed">COMPLETED</div>
+            <div className="status-badge completed">Completed</div>
           </div>
 
           {/* High School */}
           <div className="education-card">
             <div className="card-corner-accent"></div>
-            <div className="degree-icon"></div>
+            <div className="degree-icon"><FontAwesomeIcon icon={faSchool} /></div>
             <h3 className="degree-title">National Senior Certificate</h3>
             <p className="institution">Randfontein High School</p>
-            <p className="education-dates">January 2017 - December 2021</p>
+            <p className="education-dates">January 2017 – December 2021</p>
             <div className="degree-divider"></div>
             <p className="education-description">
-              Completed high school education with a focus on Mathematics, Accounting, 
+              Completed high school education with a focus on Mathematics, Accounting,
               Business Studies and Computer Applications Technology.
             </p>
-            <div className="status-badge completed">COMPLETED</div>
+            <div className="status-badge completed">Completed</div>
           </div>
         </div>
       </div>

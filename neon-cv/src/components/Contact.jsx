@@ -1,14 +1,15 @@
 // --- components/Contact.jsx ---
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { 
-  faEnvelope, 
-  faBriefcase, 
-  faCircleCheck, 
-  faUserAstronaut, 
-  faRocket 
+import {
+  faEnvelope,
+  faCircleCheck,
+  faCircleXmark,
+  faRocket,
 } from "@fortawesome/free-solid-svg-icons";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+// NOTE: faBriefcase and faUserAstronaut were imported before but never used
+// anywhere in this file — dropped them rather than leave dead imports.
 
 const API_URL = import.meta.env.VITE_API_URL;
 
@@ -109,9 +110,9 @@ export default function Contact() {
                 ></textarea>
               </div>
 
-              <button 
-                type="submit" 
-                className="neon-button submit-button"
+              <button
+                type="submit"
+                className="neon-button submit-button primary"
                 disabled={isSubmitting}
               >
                 {isSubmitting ? 'SENDING...' : 'SEND MESSAGE'}
@@ -124,7 +125,7 @@ export default function Contact() {
               )}
               {status === 'error' && (
                 <div className="status-message error">
-                  ✗ Oops! Something went wrong. Please try again.
+                  <FontAwesomeIcon icon={faCircleXmark} /> Something went wrong. Please try again.
                 </div>
               )}
             </form>
@@ -135,18 +136,21 @@ export default function Contact() {
             <div className="contact-card">
               <FontAwesomeIcon icon={faEnvelope} className="contact-icon" />
               <h3>Email</h3>
-              <a href="mailto:unathilubombzmbolongwe@gmail.com" 
+              {/* Was unathilubombzmbolongwe@gmail.com — the typo'd secondary
+                  address; switched to your default address to match the CV. */}
+              <a href="mailto:theeunathimbolongwe@gmail.com"
               className="contact-link">
-                unathilubombzmbolongwe@gmail.com
+                theeunathimbolongwe@gmail.com
               </a>
             </div>
 
             <div className="contact-card">
               <FontAwesomeIcon icon={faLinkedin} className="contact-icon" />
               <h3>LinkedIn</h3>
-              <a 
-                href="https://www.linkedin.com/in/unathi-mbolongwe/" 
+              <a
+                href="https://www.linkedin.com/in/unathi-mbolongwe/"
                 target="_blank"
+                rel="noopener noreferrer"
                 className="contact-link"
               >
                 Connect with me
@@ -156,9 +160,10 @@ export default function Contact() {
             <div className="contact-card">
               <FontAwesomeIcon icon={faGithub} className="contact-icon" />
               <h3>GitHub</h3>
-              <a 
-                href="https://github.com/kvnxmars" 
-                target="_blank" 
+              <a
+                href="https://github.com/kvnxmars"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="contact-link"
               >
                 Check out my projects

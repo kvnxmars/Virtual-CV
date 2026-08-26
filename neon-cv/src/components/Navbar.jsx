@@ -1,5 +1,7 @@
 // --- components/Navbar.jsx ---
 import React, { useState, useEffect } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,13 +17,8 @@ export default function Navbar() {
     document.body.classList.add(isDark ? 'dark-mode' : 'light-mode');
   }, []);
 
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
-
-  const closeMenu = () => {
-    setIsOpen(false);
-  };
+  const toggleMenu = () => setIsOpen(!isOpen);
+  const closeMenu = () => setIsOpen(false);
 
   const toggleTheme = () => {
     const newMode = !isDarkMode;
@@ -43,10 +40,10 @@ export default function Navbar() {
   return (
     <nav className="navbar">
       <div className="nav-logo">KEVIN</div>
-      
+
       <div className="nav-center">
         {/* Hamburger Icon */}
-        <div className={`hamburger ${isOpen ? 'active' : ''}`} onClick={toggleMenu}>
+        <div className={`hamburger ${isOpen ? 'active' : ''}`} onClick={toggleMenu} aria-label="Toggle menu">
           <span></span>
           <span></span>
           <span></span>
@@ -64,14 +61,17 @@ export default function Navbar() {
         </ul>
       </div>
 
-      {/* Theme Toggle */}
-      <button 
+      {/* Theme Toggle — was raw <i className="fa-solid ..."> before, which only
+          renders if the FontAwesome CDN kit is loaded separately in index.html.
+          Contact.jsx already uses the @fortawesome/react-fontawesome package,
+          so this now matches that (single, bundled approach, no CDN dependency). */}
+      <button
         className={`theme-toggle ${isDarkMode ? 'active' : ''}`}
         onClick={toggleTheme}
         aria-label="Toggle dark mode"
         title={isDarkMode ? 'Switch to light mode' : 'Switch to dark mode'}
       >
-        <i className={`fa-solid ${isDarkMode ? 'fa-moon' : 'fa-sun'}`} aria-hidden="true"></i>
+        <FontAwesomeIcon icon={isDarkMode ? faMoon : faSun} />
       </button>
     </nav>
   );
