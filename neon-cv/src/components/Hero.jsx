@@ -19,7 +19,7 @@ export default function Hero() {
 
         <p className="subtext">
           <span><i className="fa-solid fa-laptop-code"></i> Software Developer</span>
-          <span><i className="fa-solid fa-palette"></i> UI/UX Designer</span>
+          <span><i className="fa-solid fa-palette"></i> Data Science </span>
           <span><i className="fa-solid fa-server"></i> Backend Systems</span>
           <span><i className="fa-solid fa-layer-group"></i> Full Stack Systems</span>
         </p>

@@ -11,7 +11,7 @@ return (
 <div className="about-grid">
 <div className="glass">
 <p>
-I have just completed my BSc IT degree at the North-West University. I have a passion for building clean,
+I have just completed my BSc IT degree at the North-West University and am currently doing my Bsc (Hons) at the University of Pretoria. I have a passion for building clean,
 performant software. My experience ranges from backend services to full-stack apps and data-centric
 projects. I enjoy designing reliable systems and elegant user experiences.
 </p>

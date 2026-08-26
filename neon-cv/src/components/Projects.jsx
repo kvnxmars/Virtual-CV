@@ -30,6 +30,30 @@ export default function Projects() {
           </div>
         </div>
 
+        {/* Insider threat detector */}
+        <div className="project-card neon-card">
+          <h3>Insider Threat Detector</h3>
+          <p>
+           An end-to-end pipeline using a Random Forest classifier (~94% accuracy) to flag high-risk insider activity, with an interactive Streamlit dashboard for model explainability.
+          </p>
+
+          <div className="project-buttons">
+            <button
+              className="neon-button small"
+              onClick={() =>
+                window.open(
+                  "https://github.com/kvnxmars/insider-threats-detector",
+                  "_blank"
+                )
+              }
+            >
+              GitHub
+            </button>
+          </div>
+        </div>
+
+        
+
         {/* FIT@NWU */}
         <div className="project-card neon-card">
           <h3>FIT@NWU</h3>

@@ -8,6 +8,20 @@ export default function Education() {
         <h2 className="section-title glow-text">EDUCATION</h2>
         
         <div className="education-grid">
+          {/* Bsc (Hons) Computer Science */}
+          <div className="education-card">
+            <div className="card-corner-accent"></div>
+            <div className="degree-icon"></div>
+            <h3 className="degree-title">BSc Honours Computer Science</h3>
+            <p className="institution">University Pretoria</p>
+            <p className="education-dates">February 2026 - November 2026</p>
+            <div className="degree-divider"></div>
+            <p className="education-description">
+              Currently completing an Honours in Computer Science with a strong focus on Data, Software and AI systems. Modules include Information Security, Software Engineering, AI II and Data Mining.
+            </p>
+            <div className="status-badge in progress">In Progress</div>
+          </div>
+          
           {/* BSc IT */}
           <div className="education-card">
             <div className="card-corner-accent"></div>

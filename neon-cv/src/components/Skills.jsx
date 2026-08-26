@@ -7,7 +7,7 @@ export default function Skills() {
     { category: "Frameworks", items: [".NET Core", "ASP.NET", "SpringBoot"] },
     { category: "Databases", items: ["MySQL", "PostgreSQL", "MongoDB"] },
     { category: "Web Tech", items: ["React", "Vue", "Node", "Express"] },
-    { category: "Tools", items: ["Git / GitHub", "Visual Studio / VS Code"] }
+    { category: "Tools", items: ["Git / GitHub", "Visual Studio / VS Code", "Jupyter Notebook"] }
   ];
 
   const softSkills = [
